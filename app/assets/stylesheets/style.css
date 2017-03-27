@@ -1,0 +1,16 @@
+.body-container {
+  padding: 20px;
+}
+
+table thead th {
+  white-space: nowrap;
+}
+
+.jumbotron {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.new_upload_div, .records_div {
+  padding-left: 25px;
+}

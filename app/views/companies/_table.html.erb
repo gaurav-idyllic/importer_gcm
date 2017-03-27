@@ -1,0 +1,46 @@
+<div class="pull-right">
+  <%= paginate data, window: 10, remote: true %>
+</div>
+<div class="clearfix"></div>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Invoice Number</th>
+        <th>Invoice Date</th>
+        <th>Operation Date</th>
+        <th>Amount</th>
+        <th>Reporter</th>
+        <th>Notes</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if data.any? %>
+        <% data.each do |datum| %>
+          <tr>
+            <td><%= datum.id %></td>
+            <td><%= datum.company %></td>
+            <td><%= datum.invoice_num %></td>
+            <td><%= datum.invoice_date %></td>
+            <td><%= datum.operation_date %></td>
+            <td><%= datum.amount %></td>
+            <td><%= datum.reporter %></td>
+            <td><%= datum.notes %></td>
+            <td><%= datum.status %></td>
+          </tr>
+        <% end %>
+      <% else %>
+        <tr>
+          <td colspan='9'>NO DATA FOUND.</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="pull-right">
+  <%= paginate data, window: 10, remote: true %>
+</div>

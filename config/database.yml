@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  password: root
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: importer-gcm-development
+
+
+test:
+  <<: *default
+  database: importer-gcm-test
+
+production:
+  <<: *default
+  database: importer-gcm-production
