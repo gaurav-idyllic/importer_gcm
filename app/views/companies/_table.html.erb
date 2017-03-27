@@ -7,7 +7,6 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Name</th>
         <th>Invoice Number</th>
         <th>Invoice Date</th>
         <th>Operation Date</th>
@@ -22,7 +21,6 @@
         <% data.each do |datum| %>
           <tr>
             <td><%= datum.id %></td>
-            <td><%= datum.company %></td>
             <td><%= datum.invoice_num %></td>
             <td><%= datum.invoice_date %></td>
             <td><%= datum.operation_date %></td>
@@ -34,7 +32,7 @@
         <% end %>
       <% else %>
         <tr>
-          <td colspan='9'>NO DATA FOUND.</td>
+          <td colspan='8'>NO DATA FOUND.</td>
         </tr>
       <% end %>
     </tbody>
